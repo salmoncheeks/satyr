@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.satyr_unity.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\cheeks\repositories\satyr\satyr_unity\.idea\.idea.satyr_unity\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
