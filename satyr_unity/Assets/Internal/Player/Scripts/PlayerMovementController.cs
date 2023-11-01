@@ -1,17 +1,40 @@
+/*
+ * Author: SalmonCheeks
+ * Project: Satyr
+ * © Bear Talk Studios 2021
+ */
+
 using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    /////////////////////////
+    /// SERIALIZED FIELDS ///
+    /////////////////////////
+    
     [SerializeField] private CharacterController _controller;
     [SerializeField] private Animator _animator;
-
-    private Vector3 _playerVelocity;
-    private bool _groundedPlayer;
-    private bool _walkingPlayer;
+    
+    /////////////////
+    /// CONSTANTS ///
+    /////////////////
+    
     private const float PLAYER_SPEED = 2.0f;
     private const float JUMP_HEIGHT = 1.0f;
     private const float GRAVITY_VALUE = -9.81f;
+    
+    /////////////////////////
+    /// PRIVATE VARIABLES ///
+    /////////////////////////
+    
+    private Vector3 _playerVelocity;
+    private bool _groundedPlayer;
+    private bool _walkingPlayer;
 
+    /////////////////////////
+    /// PRIVATE FUNCTIONS ///
+    /////////////////////////
+    
     private void Update()
     {
         _groundedPlayer = _controller.isGrounded;
@@ -47,7 +70,7 @@ public class PlayerMovementController : MonoBehaviour
 
         }
 
-        if (Input.GetButtonDown("Jump") && _groundedPlayer)
+        if (Input.GetButton("Jump") && _groundedPlayer)
         {
             _playerVelocity.y += Mathf.Sqrt(JUMP_HEIGHT * -3.0f * GRAVITY_VALUE);
         }
